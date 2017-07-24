@@ -4,7 +4,8 @@ Proof that iterator methods are slow sometimes
 ## Benchmarks
 
 ```
-running 2 tests
-test iterator ... bench:       9,046 ns/iter (+/- 1,773)
-test slice    ... bench:       5,446 ns/iter (+/- 2,275)
+running 3 tests
+test iterator        ... bench:       8,980 ns/iter (+/- 1,661)
+test iterator_cloned ... bench:      36,058 ns/iter (+/- 7,442)
+test slice           ... bench:       4,920 ns/iter (+/- 1,207)
 ```
