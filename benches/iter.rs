@@ -13,6 +13,14 @@ fn iterator(b: &mut Bencher) {
 }
 
 #[bench]
+fn iterator_cloned(b: &mut Bencher) {
+    let vec = vec![0; 10_000];
+    b.iter(|| {
+        assert!(vec.iter().cloned().all(|x| x == 0));
+    })
+}
+
+#[bench]
 fn slice(b: &mut Bencher) {
     let vec = vec![0; 10_000];
     b.iter(|| {
